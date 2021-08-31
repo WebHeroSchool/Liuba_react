@@ -13,6 +13,7 @@ true || (x = 1)
 
 
 
+
 function App() {
   return (
     <div className="App">
@@ -22,7 +23,8 @@ function App() {
           Edit <code>src/App.js</code> and save to reload.
         </p>
         <p style={{
-          color: 'blue'
+          color: 'blue',
+          fontSize: 45
         }}>
           Hello world!
         </p>
