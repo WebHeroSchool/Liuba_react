@@ -1,9 +1,10 @@
 import logo from './logo.svg';
 import './App.css';
 
+
 const message = 'NUMBER'
 const number = 6
-const count = 2+10
+const calculate = 2+10
 const result = true
 const age = 26;
 const beverage = (age >= 21) ? "Beer" : "Juice";
@@ -36,6 +37,9 @@ function App() {
         </p>
         <p>
           {number}
+        </p>
+        <p>
+          {calculate}
         </p>
         <p>
           {beverage}
