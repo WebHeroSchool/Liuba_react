@@ -1,5 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
+import {count, length} from './number.js'
 
 
 const message = 'NUMBER'
@@ -49,6 +50,7 @@ function App() {
         </p>
         <p>
           {x}
+          count * length = {count*length}
         </p>
 
 
