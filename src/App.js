@@ -1,15 +1,18 @@
 import logo from './logo.svg';
 import './App.css';
+import {count, length} from './number.js'
+
 
 const message = 'NUMBER'
 const number = 6
-const count = 2+10
+const calculate = 2+10
 const result = true
 const age = 26;
 const beverage = (age >= 21) ? "Beer" : "Juice";
 let x;
 
 true || (x = 1)
+
 
 
 
@@ -22,7 +25,8 @@ function App() {
           Edit <code>src/App.js</code> and save to reload.
         </p>
         <p style={{
-          color: 'blue'
+          color: 'blue',
+          fontSize: 45
         }}>
           Hello world!
         </p>
@@ -36,6 +40,9 @@ function App() {
           {number}
         </p>
         <p>
+          {calculate}
+        </p>
+        <p>
           {beverage}
         </p>
         <p>
@@ -43,6 +50,7 @@ function App() {
         </p>
         <p>
           {x}
+          count * length = {count*length}
         </p>
 
 
