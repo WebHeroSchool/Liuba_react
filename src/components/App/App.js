@@ -5,12 +5,25 @@ import Footer from '../Footer/Footer';
 
 const todoItem ='Написать новое приложение';
 
-const App = () => (
+const App = () => {
+    const items =[
+        {
+          value:'Написать новое приложение'
+        },
+        {
+          value: 'прописать пропсы'
+        },
+        {
+          value: 'залить на гитхаб'
+        }
+    ]
+  return(
   <div>
       <h1>Важные дела:</h1>
       <InputItem />
-      <ItemList todoItem={todoItem} />
+      <ItemList items={items} />
       <Footer count={3} />
   </div>);
+  }
 
 export default App;
