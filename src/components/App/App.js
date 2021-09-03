@@ -2,15 +2,29 @@ import React from 'react';
 import ItemList from '../ItemList/ItemList';
 import InputItem from '../InputItem/InputItem';
 import Footer from '../Footer/Footer';
+import './App.css';
 
 const todoItem ='Написать новое приложение';
 
-const App = () => (
-  <div>
-      <h1>Важные дела:</h1>
+const App = () => {
+    const items =[
+        {
+          value:'Написать новое приложение'
+        },
+        {
+          value: 'прописать пропсы'
+        },
+        {
+          value: 'залить на гитхаб'
+        }
+    ]
+  return(
+  <div className="wrap">
+      <h1 className="wrap__title">Важные дела:</h1>
       <InputItem />
-      <ItemList todoItem={todoItem} />
-      <Footer count={3} />
+      <ItemList items = {items} />
+      <Footer count ={3} />
   </div>);
+  }
 
 export default App;
