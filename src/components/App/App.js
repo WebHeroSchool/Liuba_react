@@ -9,21 +9,22 @@ const todoItem ='Написать новое приложение';
 const App = () => {
     const items =[
         {
-          value:'Написать новое приложение',
+          value:'write my own styles',
           isDone: true
         },
         {
-          value: 'прописать пропсы',
+          value: 'finish 26 lesson',
+          isDone: true
+        },
+        {
+          value: 'start a new lesson',
           isDone: false
-        },
-        {
-          value: 'залить на гитхаб',
-          isDone: true
         }
     ]
   return(
+
   <div className={styles.wrap}>
-      <h1 className={styles.title}>Важные дела:</h1>
+      <h1 className={styles.title}>TO-DO LIST </h1>
       <InputItem />
       <ItemList items = {items} />
       <Footer count ={3} />
