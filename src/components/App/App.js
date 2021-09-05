@@ -6,7 +6,8 @@ import styles from './App.module.css';
 
 const todoItem ='Написать новое приложение';
 
-const App = () => {
+class App extends React.Component{
+  render(){
     const items =[
         {
           value:'write my own styles',
@@ -30,5 +31,6 @@ const App = () => {
       <Footer count ={3} />
   </div>);
   }
+};
 
 export default App;
