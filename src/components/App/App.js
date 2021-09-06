@@ -4,11 +4,9 @@ import InputItem from '../InputItem/InputItem';
 import Footer from '../Footer/Footer';
 import styles from './App.module.css';
 
-const todoItem ='Написать новое приложение';
-
 class App extends React.Component{
   state ={
-    
+
     items: [
       {
         value:'write my own styles',
@@ -22,10 +20,12 @@ class App extends React.Component{
         value: 'start a new lesson',
         isDone: false
       }
-  ]
+  ],
+  count: 6
 };
 
-  onClickDone = isDone => console.log(isDone);
+  onClickDone = isDone => {};
+  onClickFooter = () => this.setState(state => ({count: state.count -1}));
 
 render() {
     return(
@@ -33,7 +33,7 @@ render() {
           <h1 className={styles.title}>TO-DO LIST </h1>
           <InputItem />
           <ItemList items = {this.state.items} onClickDone={this.onClickDone}/>
-          <Footer count ={3} />
+          <Footer count ={this.state.count} onClickFooter={this.onClickFooter}/>
       </div>);
     }
 };

@@ -1,6 +1,5 @@
 import React from 'react';
  import Item from '../Item/Item'
- import styles from './ItemList.module.css';
  import Checkbox from '@material-ui/core/Checkbox';
  import DeleteOutlineIcon from '@material-ui/icons/DeleteOutline';
  import ListItemText from '@material-ui/core/ListItemText';
