@@ -1,15 +1,22 @@
 body {
-  background-image: linear-gradient(to right, #778899, #ADD8E6, #778899);
-  height: 100%;
-  font-family: Brush Script MT;
+  background-image: linear-gradient(to right, #3f51b5, #E6E6FA, #E6E6FA, #3f51b5);
+  font-family: Tahoma;
 }
 
 .wrap {
   margin: auto;
-  width: 300px;
+  margin-top: 30px;
+  width: 30%;
+  background-color: #F5FFFA;
+  padding: 4%;
 }
 
 .title {
-  margin: 100px 0 40px;
-  font-size: 26px;
+  font-size: 40px;
+  font-weight: 900;
+  text-align: center;
+  margin: 0;
+  color: #3f51b5;
+
+
 }
