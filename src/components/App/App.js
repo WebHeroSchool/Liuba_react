@@ -10,22 +10,37 @@ class App extends React.Component{
     items: [
       {
         value:'write my own styles',
-        isDone: true
+        isDone: true,
+        id: 1
       },
       {
         value: 'finish 26 lesson',
-        isDone: true
+        isDone: true,
+        id: 2
       },
       {
         value: 'start a new lesson',
-        isDone: false
+        isDone: false,
+        id: 3
       }
   ],
   count: 6
 };
 
-  onClickDone = isDone => {};
-  onClickFooter = () => this.setState(state => ({count: state.count -1}));
+  onClickDone = id => {
+    const newItemList = this.state.items.map(item=>{
+      const newItem = {...item};
+
+      if (item.id === id){
+        newItem.isDone = !item.isDone;
+      }
+
+      return newItem;
+    });
+
+    this.setState({ items: newItemList });
+  };
+
 
 render() {
     return(
@@ -33,7 +48,7 @@ render() {
           <h1 className={styles.title}>TO-DO LIST </h1>
           <InputItem />
           <ItemList items = {this.state.items} onClickDone={this.onClickDone}/>
-          <Footer count ={this.state.count} onClickFooter={this.onClickFooter}/>
+          <Footer count ={this.state.count} />
       </div>);
     }
 };
