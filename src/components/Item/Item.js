@@ -8,7 +8,6 @@ import styles from './Item.module.css';
 
 const Item = ({ item, classes, value, isDone, onClickDone, id }) =>(
   <div>
-
       <ListItem>
           <Checkbox color="primary"
           checked={isDone}
