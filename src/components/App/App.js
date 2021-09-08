@@ -41,13 +41,20 @@ class App extends React.Component{
     this.setState({ items: newItemList });
   };
 
+  onClickDelete = id => {
+    const newItemList = this.state.items.filter ( item => item.id !=id);
+    this.setState({items: newItemList});
+  };
 
 render() {
     return(
       <div className={styles.wrap}>
           <h1 className={styles.title}>TO-DO LIST </h1>
           <InputItem />
-          <ItemList items = {this.state.items} onClickDone={this.onClickDone}/>
+          <ItemList items = {this.state.items}
+          onClickDone= {this.onClickDone}
+          onClickDelete= {this.onClickDelete}
+          />
           <Footer count ={this.state.count} />
       </div>);
     }

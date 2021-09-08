@@ -6,7 +6,7 @@ import ListItemText from '@material-ui/core/ListItemText';
 import ListItem from '@material-ui/core/ListItem';
 import styles from './Item.module.css';
 
-const Item = ({ item, classes, value, isDone, onClickDone, id }) =>(
+const Item = ({ item, classes, value, isDone, onClickDone, id, onClickDelete }) =>(
   <div>
       <ListItem>
           <Checkbox color="primary"
@@ -23,7 +23,7 @@ const Item = ({ item, classes, value, isDone, onClickDone, id }) =>(
                {value}
            </span>)
        </ListItemText>
-       <DeleteOutlineIcon />
+       <DeleteOutlineIcon onClick = {() => onClickDelete (id)} />
       </ListItem>
 </div>);
 
