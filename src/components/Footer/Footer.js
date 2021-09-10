@@ -13,4 +13,8 @@ const Footer = ({ count, onClick, onClickFooter }) => (<footer className={styles
     </footer>
   )
 
+Footer.defaultProps ={
+  count: 0
+};
+
 export default Footer;

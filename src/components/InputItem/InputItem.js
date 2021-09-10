@@ -57,4 +57,8 @@ render(){
     }
   }
 
+  InputItem.defaultProps ={
+    value: 'some text'
+  };
+
 export default InputItem;
