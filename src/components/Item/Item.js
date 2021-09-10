@@ -21,7 +21,7 @@ const Item = ({ item, classes, value, isDone, onClickDone, id, onClickDelete }) 
              })
            }>
                {value}
-           </span>)
+           </span>
        </ListItemText>
        <DeleteOutlineIcon onClick = {() => onClickDelete (id)} />
       </ListItem>
