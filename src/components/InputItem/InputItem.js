@@ -6,6 +6,7 @@ import PropTypes from'prop-types';
 
 
 class InputItem extends React.Component {
+
   state = {
     inputValue: ''
   };
