@@ -5,6 +5,8 @@ import DeleteOutlineIcon from '@material-ui/icons/DeleteOutline';
 import ListItemText from '@material-ui/core/ListItemText';
 import ListItem from '@material-ui/core/ListItem';
 import styles from './Item.module.css';
+import PropTypes from'prop-types';
+
 
 const Item = ({ item, classes, value, isDone, onClickDone, id, onClickDelete }) =>(
   <div>
@@ -27,9 +29,12 @@ const Item = ({ item, classes, value, isDone, onClickDone, id, onClickDelete }) 
       </ListItem>
 </div>);
 
-Item.defaultProps ={
-  isDone: false,
-  id: 0
-};
+Item.propTypes = {
+    value: PropTypes.string.isRequired,
+    isDone: PropTypes.bool.isRequired,
+    onClickDone: PropTypes.func.isRequired,
+    onCliсkDelete: PropTypes.func.isRequired,
+    id: PropTypes.number.isRequired
+  };
 
 export default Item;

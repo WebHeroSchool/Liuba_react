@@ -2,6 +2,7 @@ import React from 'react';
 import TextField from '@material-ui/core/TextField';
 import styles from './InputItem.module.css';
 import AddBoxRoundedIcon from '@material-ui/icons/AddBoxRounded';
+import PropTypes from'prop-types';
 
 
 class InputItem extends React.Component {
@@ -57,8 +58,14 @@ render(){
     }
   }
 
-  InputItem.defaultProps ={
-    value: 'some text'
-  };
+  InputItem.propTypes = {
+      inputValue: PropTypes.string.isRequired,
+      onCliсkAdd: PropTypes.func.isRequired,
+      isError: PropTypes.bool.isRequired,
+      textField: PropTypes.string.isRequired,
+      value: PropTypes.string.isRequired,
+      onChange: PropTypes.func.isRequired,
+      onButtonClick: PropTypes.func.isRequired
+    };
 
 export default InputItem;
