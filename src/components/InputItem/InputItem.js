@@ -59,14 +59,8 @@ render(){
     }
   }
 
-  InputItem.propTypes = {
-      inputValue: PropTypes.string.isRequired,
-      onCliсkAdd: PropTypes.func.isRequired,
-      isError: PropTypes.bool.isRequired,
-      textField: PropTypes.string.isRequired,
-      value: PropTypes.string.isRequired,
-      onChange: PropTypes.func.isRequired,
-      onButtonClick: PropTypes.func.isRequired
-    };
+  InputItem.defaultProps ={
+    value: 'some text'
+  };
 
 export default InputItem;

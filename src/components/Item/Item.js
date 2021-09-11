@@ -8,17 +8,13 @@ import styles from './Item.module.css';
 import PropTypes from'prop-types';
 
 class Item extends React.Component{
-  componentDidMount() {
-    console.log('componentDidMount');
-  }
-
-  componentDidUpdate() {
-    console.log('componentDidUpdate');
-  }
-
-  componentWillUnmount() {
-    console.log('componentWillUnmount');
-  }
+  // componentDidMount() {
+  //   this.timer = setInterval(() => console.log('text'), 1000 );
+  // }
+  //
+  // componentWillUnmount() {
+  //   clearInterval(this.timer);
+  // }
 
   render () {
     const { item, classes, value, isDone, onClickDone, id, onClickDelete } = this.props;
@@ -44,12 +40,9 @@ class Item extends React.Component{
   }
 }
 
-Item.propTypes = {
-    value: PropTypes.string.isRequired,
-    isDone: PropTypes.bool.isRequired,
-    onClickDone: PropTypes.func.isRequired,
-    onCliсkDelete: PropTypes.func.isRequired,
-    id: PropTypes.number.isRequired
-  };
+Item.defaultProps ={
+  isDone: false,
+  id: 0
+};
 
 export default Item;
