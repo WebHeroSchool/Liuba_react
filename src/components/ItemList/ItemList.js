@@ -1,22 +1,24 @@
 import React from 'react';
- import Item from '../Item/Item'
- import styles from './ItemList.module.css';
- import Checkbox from '@material-ui/core/Checkbox';
- import DeleteOutlineIcon from '@material-ui/icons/DeleteOutline';
- import ListItemText from '@material-ui/core/ListItemText';
- import ListItem from '@material-ui/core/ListItem';
- import ListItemIcon from '@material-ui/core/ListItemIcon';
+import List from '@material-ui/core/List';
+import Item from '../Item/Item';
+import PropTypes from 'prop-types';
 
- const ItemList = ({ items, isDone, onClickDone }) =>(<div>
+ const ItemList = ({ items, onClickDone, onClickDelete }) => (<List>
+  {items.map(item => <List key={item.value}>
+    <Item
+      value={item.value}
+      isDone={item.isDone}
+      id={item.id}
+      onClickDone = {onClickDone}
+      onClickDelete={onClickDelete}
+    />
+  </List>)}
+</List>);
 
-     {items.map(item => (
-       <ListItem key={item.value} className={item}>
-         <ListItemIcon>
-           <Checkbox color="primary" inputProps={{'aria-label': 'uncontrolled-checkbox'}} onClick = {() => console.log(item.isDone)}/>
-         </ListItemIcon>
-         <ListItemText><Item value={item.value} isDone={item.isDone} onClickDone={onClickDone} /></ListItemText>
-             <DeleteOutlineIcon />
-       </ListItem>
-     ))}
- </div>);
+ItemList.propTypes = {
+      items: PropTypes.array.isRequired,
+      onClickDone: PropTypes.func.isRequired,
+      onCliсkDelete: PropTypes.func.isRequired
+  };
+
 export default ItemList;
