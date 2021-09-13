@@ -3,8 +3,8 @@ import styles from './Footer.module.css';
 import Button from '@material-ui/core/Button';
 import PropTypes from'prop-types';
 
-const Footer = ({ count, onClick, onClickFooter }) => (<footer className={styles.wrap}>
-<div className={styles.count} onClick={onClickFooter}> {count} items left: </div>
+const Footer = ({ count }) => (<footer className={styles.wrap}>
+<div className={styles.count}> {count} items left: </div>
     <div>
       <Button className={styles.button}>ALL</Button>
       <Button color="primary">Active </Button>
@@ -14,8 +14,8 @@ const Footer = ({ count, onClick, onClickFooter }) => (<footer className={styles
     </footer>
   )
 
-  Footer.defaultProps ={
-  count: 0
-};
+  Footer.propTypes = {
+    count: PropTypes.number
+  };
 
 export default Footer;

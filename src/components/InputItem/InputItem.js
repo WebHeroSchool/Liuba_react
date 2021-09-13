@@ -59,8 +59,9 @@ render(){
     }
   }
 
-  InputItem.defaultProps ={
-    value: 'some text'
-  };
+  InputItem.propTypes = {
+      onCliсkAdd: PropTypes.func,
+      isError: PropTypes.bool,
+    };
 
 export default InputItem;
