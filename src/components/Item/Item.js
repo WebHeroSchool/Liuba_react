@@ -8,16 +8,20 @@ import styles from './Item.module.css';
 import PropTypes from'prop-types';
 
 class Item extends React.Component{
-  // componentDidMount() {
-  //   this.timer = setInterval(() => console.log('text'), 1000 );
-  // }
-  //
-  // componentWillUnmount() {
-  //   clearInterval(this.timer);
-  // }
+  componentDidMount() {
+    this.timer = setInterval(() => console.log('text'), 1000 );
+  }
+
+  componentDidUpdate() {
+      console.log('componentDidUpdate');
+    }
+
+  componentWillUnmount() {
+    clearInterval(this.timer);
+  }
 
   render () {
-    const { item, classes, value, isDone, onClickDone, id, onClickDelete } = this.props;
+    const { value, isDone, onClickDone, id, onClickDelete } = this.props;
         return (<div>
             <ListItem>
                 <Checkbox color="primary"
@@ -40,9 +44,12 @@ class Item extends React.Component{
   }
 }
 
-Item.defaultProps ={
-  isDone: false,
-  id: 0
-};
+Item.propTypes = {
+    value: PropTypes.string,
+    isDone: PropTypes.bool,
+    onClickDone: PropTypes.func,
+    onCliсkDelete: PropTypes.func,
+    id: PropTypes.number
+  };
 
 export default Item;

@@ -16,9 +16,9 @@ import PropTypes from 'prop-types';
 </List>);
 
 ItemList.propTypes = {
-      items: PropTypes.array.isRequired,
-      onClickDone: PropTypes.func.isRequired,
-      onCliсkDelete: PropTypes.func.isRequired
+      items: PropTypes.array,
+      onClickDone: PropTypes.func,
+      onCliсkDelete: PropTypes.func
   };
 
 export default ItemList;
