@@ -8,13 +8,17 @@ import styles from './Item.module.css';
 import PropTypes from'prop-types';
 
 class Item extends React.Component{
-  // componentDidMount() {
-  //   this.timer = setInterval(() => console.log('text'), 1000 );
-  // }
-  //
-  // componentWillUnmount() {
-  //   clearInterval(this.timer);
-  // }
+  componentDidMount() {
+    this.timer = setInterval(() => console.log('text'), 1000 );
+  }
+
+  componentDidUpdate() {
+      console.log('componentDidUpdate');
+    }
+
+  componentWillUnmount() {
+    clearInterval(this.timer);
+  }
 
   render () {
     const { value, isDone, onClickDone, id, onClickDelete } = this.props;
