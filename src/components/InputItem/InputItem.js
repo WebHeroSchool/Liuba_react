@@ -2,30 +2,39 @@ import React from 'react';
 import TextField from '@material-ui/core/TextField';
 import styles from './InputItem.module.css';
 import AddBoxRoundedIcon from '@material-ui/icons/AddBoxRounded';
-import PropTypes from'prop-types';
 
 
 class InputItem extends React.Component {
 
   state = {
-    inputValue: ''
+    inputValue: '',
+    isError: false
   };
 
   onButtonClick = () => {
-    this.setState({
-      inputValue: ''
-    });
+   if (this.state.inputValue === false) {
+     this.setState({
+       isError: true
+     })
+   } else {
+     this.setState({
+        inputValue: '',
+        isError: false
+    })
 
   this.props.onClickAdd(this.state.inputValue.toLowerCase());
-}
+  }
+};
+
 
 render(){
-      const isError = this.props.error;
-      let textField;
 
-        if (isError) {
+  let textField;
+
+        if (this.state.isError === true) {
           textField = <TextField
             error
+            label="Error"
             id="standard-textarea"
             fullWidth
             margin="normal"
@@ -36,7 +45,7 @@ render(){
             onChange={event => this.setState({ inputValue: event.target.value })}
           />
         } else {
-          textField = <TextField
+          textField = textField = <TextField
             id="standard-textarea"
             label="Enter your next task"
             style={{ width: "85%" }}
@@ -58,10 +67,5 @@ render(){
         </div>);
     }
   }
-
-  InputItem.propTypes = {
-      onCliсkAdd: PropTypes.func,
-      isError: PropTypes.bool,
-    };
 
 export default InputItem;
