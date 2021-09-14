@@ -17,7 +17,7 @@ class Item extends React.Component{
   // }
 
   render () {
-    const { item, classes, value, isDone, onClickDone, id, onClickDelete } = this.props;
+    const { value, isDone, onClickDone, id, onClickDelete } = this.props;
         return (<div>
             <ListItem>
                 <Checkbox color="primary"
@@ -40,9 +40,12 @@ class Item extends React.Component{
   }
 }
 
-Item.defaultProps ={
-  isDone: false,
-  id: 0
-};
+Item.propTypes = {
+    value: PropTypes.string,
+    isDone: PropTypes.bool,
+    onClickDone: PropTypes.func,
+    onCliсkDelete: PropTypes.func,
+    id: PropTypes.number
+  };
 
 export default Item;
