@@ -46,6 +46,7 @@ render(){
           />
         } else {
           textField = textField = <TextField
+            className={styles.input}
             id="standard-textarea"
             label="Enter your next task"
             style={{ width: "85%" }}
