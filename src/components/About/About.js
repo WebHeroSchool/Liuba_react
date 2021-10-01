@@ -68,7 +68,7 @@ class About extends React.Component{
             <h1 className={styles.title}> {infoProfile.name} </h1>
             <img className={styles.avatar} src={infoProfile.avatar_url} alt='Avatar'/>
             <h3 className={styles.subtitle}> My repositories: </h3>
-            {isError ? 'Not found' + console.error:
+              {isError ? `Not found!` + " " + error :
             <ol>
             {repoList.map(repo =>(<li key={repo.id} className={styles.list}>
               <a href={repo.svn_url} className={styles.element}> {repo.name} </a>
@@ -76,7 +76,7 @@ class About extends React.Component{
             </ol>
           }
         </div>
-        }
+      }
         </div>
       );
   }
