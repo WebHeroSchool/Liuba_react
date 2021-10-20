@@ -1,0 +1,11 @@
+.wrap_no_cases {
+  display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    height: 293px;
+    width: 100%;
+  background: url(../../images/no_tasks.svg) center no-repeat;
+  background-size: 265px 165px;
+  text-align: center;
+}
