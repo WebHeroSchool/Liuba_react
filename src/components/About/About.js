@@ -52,7 +52,7 @@ class About extends React.Component {
         isErrorRepositories: true,
         error: err
       });
-    })
+    });
 
 
 
