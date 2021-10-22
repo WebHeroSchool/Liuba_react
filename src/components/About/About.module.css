@@ -45,7 +45,7 @@
   text-align: center;
 }
 
-.projects{
+.projects {
   margin: 10px 0 10px 10px;
 }
 
@@ -58,7 +58,7 @@
     color: #3f51b5;
 }
 
-.link__projects:hover{
+.link__projects:hover {
 color: #356EFF;
 }
 
@@ -67,7 +67,7 @@ color: #356EFF;
     flex-direction: column;
 }
 
-.main__title{
+.main__title {
   margin-bottom: 5%;
 }
 
@@ -86,16 +86,12 @@ color: #356EFF;
     background: url(../../images/error.svg) center bottom 71px no-repeat;
     background-size: 265px 165px;
     text-align: center;
-
 }
-
 
 .repos {
   margin: 0 30px 10px 0;
   height: 200px;
 }
-  /* //потом добавлю 4 для примера и поменяю высоту*/
-
 
 .repo {
     display: flex;
@@ -108,11 +104,10 @@ color: #356EFF;
     box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.25);
 }
 
-.list{
+.list {
   margin: 0;
   text-align: left;
 }
-
 
 .repo_wrapped {
     display: flex;
@@ -240,17 +235,18 @@ color: #356EFF;
 
 @media screen and (max-width: 1000px) and (min-width: 150px){
 
-  body {
-    margin: auto;
-    font-size: 18px;
-    overflow-y: hidden;
-  }
+body {
+  margin: auto;
+  font-size: 18px;
+  overflow-y: hidden;
+}
 
-  .wrap{
+  .wrap {
     padding: 0;
   }
 
-  .row, .column {
+  .row
+  , .column {
     display: block;
   }
 
@@ -264,24 +260,25 @@ color: #356EFF;
     font-size: 24px;
   }
 
-  .avatar{
+  .avatar {
     width: 300px;
     margin-bottom: 2px;
   }
 
-  .link__projects{
+  .link__projects {
     font-size: 18px;
   }
 
-  .main, .projects{
+  .main, .projects {
     padding: 0 4.4%;
   }
 
-  .repo_link, .button {
+  .repo_link
+  , .button {
     font-size: 18px;
   }
 
-  .button{
+  .button {
     width: 80px;
     height: 38px;
     margin-bottom: 5%;
@@ -300,7 +297,7 @@ color: #356EFF;
     font-size: 15px;
   }
 
-  .title{
+  .title {
     margin-bottom: 10px;
   }
 
@@ -309,7 +306,7 @@ color: #356EFF;
     margin-bottom: 10px;
   }
 
-  .avatar{
+  .avatar {
     margin-bottom: 0;
     width: 220px;
   }
@@ -319,7 +316,8 @@ color: #356EFF;
     margin: 3px 10px;
   }
 
-  .main, .projects{
+  .main
+  , .projects {
     padding: 0 4.4%;
   }
 
@@ -332,11 +330,12 @@ color: #356EFF;
     height: 180px;
   }
 
-  .main__title, .repo__title {
+  .main__title
+  , .repo__title {
     margin-bottom: 4%;
   }
 
-  .button{
+  .button {
     margin-bottom: 3%;
     height: 32px;
     width: 74px;
@@ -378,7 +377,7 @@ color: #356EFF;
     height: 130px;
   }
 
-  .repo{
+  .repo {
     height: 40px;
     border: 1px inset #ccc;
   }
@@ -387,11 +386,14 @@ color: #356EFF;
     font-size: 8px;
   }
 
-  .main__title, .repo__title {
+  .main__title
+  , .repo__title {
     margin-bottom: 11px;
   }
 
-  .repo_info__html-icon, .repo_info__css-icon, .repo_info__javascript-icon{
+  .repo_info__html-icon
+  , .repo_info__css-icon
+  , .repo_info__javascript-icon {
     width: 8px;
     height: 8px;
   }

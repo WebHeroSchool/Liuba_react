@@ -20,12 +20,12 @@
 }
 
 
-.contacts{
+.contacts {
   text-decoration: none;
   color: black;
 }
 
-.vector_icon{
+.vector_icon {
   width: 12px;
   margin-right: 10px;
 }
@@ -53,15 +53,15 @@
 
 @media (max-width: 375px) {
 
-  .wrap{
+  .wrap {
     padding: 1%;
   }
 
-  .row{
+  .row {
     display: block;
   }
 
-  .column__first{
+  .column__first {
     margin-bottom: 20px;
   }
 }
