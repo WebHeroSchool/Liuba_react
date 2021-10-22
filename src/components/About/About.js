@@ -51,7 +51,7 @@ class About extends React.Component {
         isLoading: false,
         isErrorRepositories: true,
         error: err
-      })
+      });
     })
 
 
@@ -66,7 +66,7 @@ class About extends React.Component {
   })
 })
 
-.catch(err =>{
+.catch(err => {
   this.setState({
     isLoading: false,
     isError: true,

@@ -21,9 +21,9 @@ else {
 					onClickDelete={onClickDelete}
 				/>
 			</List >)}
-		</List >
+		</List >;
 	}
-}
+};
 
 ItemList.propTypes = {
       items: PropTypes.array,

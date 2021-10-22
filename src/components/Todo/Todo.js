@@ -22,7 +22,7 @@ const Todo = () =>  {
    useEffect(() => {localStorage.setItem('items', JSON.stringify(items));})
 
    const onClickDone = id => {
-     const newItemList = items.map( item =>{
+     const newItemList = items.map( item => {
        const newItem ={ ...item };
        if (item.id === id){
          newItem.isDone = !item.isDone;
@@ -34,7 +34,7 @@ const Todo = () =>  {
    };
 
    const onClickDelete = id => {
-     const newItemList = items.filter(item =>{
+     const newItemList = items.filter(item => {
        return item.id !== id;
      });
      setItems(newItemList);
@@ -52,7 +52,7 @@ const Todo = () =>  {
    };
 
    const onClickDeleteDone = id => {
-     const newItemList = items.filter(item =>{
+     const newItemList = items.filter(item => {
        return item.isDone !== true;
      });
        setItems(newItemList);

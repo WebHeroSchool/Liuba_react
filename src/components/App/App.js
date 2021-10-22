@@ -6,7 +6,7 @@ import MenuList from '@material-ui/core/MenuList';
 import Todo from '../Todo/Todo';
 import About from '../About/About';
 import Contacts from '../Contacts/Contacts';
-import styles from './App.module.css'
+import styles from './App.module.css';
 
 const App = () =>
 (<Router>

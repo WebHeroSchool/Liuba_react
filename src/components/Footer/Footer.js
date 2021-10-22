@@ -22,5 +22,6 @@ import Button from '@material-ui/core/Button';
         </Button>
       </div>
       </footer>
-    )
+    );
+    
 export default Footer;

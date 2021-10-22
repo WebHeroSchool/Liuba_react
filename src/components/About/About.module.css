@@ -223,11 +223,11 @@ color: #356EFF;
     outline: none;
 }
 
-button:disabled {
+.button:disabled {
     opacity: 0.7;
 }
 
-button:disabled:hover {
+.button:disabled:hover {
     cursor: not-allowed;
 }
 
@@ -240,52 +240,52 @@ button:disabled:hover {
 
 @media screen and (max-width: 1000px) and (min-width: 150px){
 
-body {
-  margin: auto;
-  font-size: 18px;
-  overflow-y: hidden;
-}
+  body {
+    margin: auto;
+    font-size: 18px;
+    overflow-y: hidden;
+  }
 
-.wrap{
-  padding: 0;
-}
+  .wrap{
+    padding: 0;
+  }
 
-.row, .column {
-  display: block;
-}
+  .row, .column {
+    display: block;
+  }
 
-.text {
-  padding: 0 40px;
-  font-size: 20px;
-  margin-bottom: 4%;
-}
+  .text {
+    padding: 0 40px;
+    font-size: 20px;
+    margin-bottom: 4%;
+  }
 
-.subtitle {
-  font-size: 24px;
-}
+  .subtitle {
+    font-size: 24px;
+  }
 
-.avatar{
-  width: 300px;
-  margin-bottom: 2px;
-}
+  .avatar{
+    width: 300px;
+    margin-bottom: 2px;
+  }
 
-.link__projects{
-  font-size: 18px;
-}
+  .link__projects{
+    font-size: 18px;
+  }
 
-.main, .projects{
-  padding: 0 4.4%;
-}
+  .main, .projects{
+    padding: 0 4.4%;
+  }
 
-.repo_link, .button {
-  font-size: 18px;
-}
+  .repo_link, .button {
+    font-size: 18px;
+  }
 
-.button{
-  width: 80px;
-  height: 38px;
-  margin-bottom: 5%;
-}
+  .button{
+    width: 80px;
+    height: 38px;
+    margin-bottom: 5%;
+  }
 
 }
 
