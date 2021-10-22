@@ -1,6 +1,6 @@
 .wrap {
   padding: 4%;
-  margin: 5px 40px 20px;
+  margin: 5px 40px 0;
 }
 .title {
   margin: 5px 0 40px;
@@ -42,10 +42,26 @@
   flex-direction: column;
   flex-basis: 100%;
   flex: 1;
+
 }
 
 .column__second {
   display: flex;
   flex-direction: column-reverse;
   align-self: flex-end;
+}
+
+@media (max-width: 375px) {
+
+  .wrap{
+    padding: 1%;
+  }
+
+  .row{
+    display: block;
+  }
+
+  .column__first{
+    margin-bottom: 20px;
+  }
 }

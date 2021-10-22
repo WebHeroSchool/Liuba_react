@@ -20,8 +20,12 @@ const App = () =>
       <Route path='/' exact component={About} />
       <Route path='/todo' component={Todo} />
       <Route path='/contacts' component={Contacts} />
+      <div className={styles.logo}>Designed at Web Hero School</div>
     </Card>
   </div>
-  </Router>);
+
+  </Router>
+
+);
 
 export default App;
