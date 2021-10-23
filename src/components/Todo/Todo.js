@@ -1,83 +1,101 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import ItemList from '../ItemList/ItemList';
 import InputItem from '../InputItem/InputItem';
 import Footer from '../Footer/Footer';
 import styles from './Todo.module.css';
 
 
-class Todo extends React.Component {
-    state ={
-      items: [
-      {
-        value:'write my own styles',
-        isDone: true,
-        id: 1
-      },
-      {
-        value: 'finish 26 lesson',
-        isDone: true,
-        id: 2
-      },
-      {
-        value: 'start a new lesson',
-        isDone: false,
-        id: 3
-      }
-  ],
-      count: 3
-    };
+const Todo = () =>  {
+  const initialState ={
+       items: JSON.parse(localStorage.getItem('items')) ||
+       [],
 
-onClickDone = id => {
-    const newItemList = this.state.items.map( item =>{
-
-      const newItem ={ ...item };
-            if (item.id === id){
-              newItem.isDone = !item.isDone;
-            }
-
-            return newItem;
-          });
-          this.setState({items: newItemList});
-        };
-
-  onClickDelete = id => {
-    const newItemList = this.state.items.filter ( item => item.id !==id);
-    this.setState({items: newItemList});
-  };
-
-  onClickAdd = value => {
-    if (value !== '') {
-  this.setState(state =>({
-    items: [
-      ...state.items,
-      {
-        value,
-        isDone: false,
-        id: state.count +1
-      }
-    ],
-    count: state.count +1,
-    error: false
-  }));
-  } else {
-    this.setState(state => ({ error: true }))
-  }
+      count: 0,
+      filter: 'all'
 };
-render() {
-    return(
-      <div className={styles.wrap}>
-          <h1 className={styles.title}>TO-DO LIST </h1>
-          <InputItem
-          onClickAdd={this.onClickAdd}
-          error={this.state.error}
-          />
-          <ItemList items = {this.state.items}
-          onClickDone= {this.onClickDone}
-          onClickDelete= {this.onClickDelete}
-          />
-          <Footer count={this.state.count} />
-      </div>);
-    }
+
+   const [items, setItems] = useState(initialState.items);
+   const [count, setCount] = useState(initialState.count);
+   const [filter, setFilter] =useState('allTasks');
+   let itemsFilter;
+
+   useEffect(() => {localStorage.setItem('items', JSON.stringify(items));})
+
+   const onClickDone = id => {
+     const newItemList = items.map( item => {
+       const newItem ={ ...item };
+       if (item.id === id){
+         newItem.isDone = !item.isDone;
+       }
+
+       return newItem;
+     });
+     setItems(newItemList);
+   };
+
+   const onClickDelete = id => {
+     const newItemList = items.filter(item => {
+       return item.id !== id;
+     });
+     setItems(newItemList);
+   };
+
+   const onClickAdd = value => {
+     setItems(
+       [...items,
+         {
+           value: value,
+           isDone: false,
+           id: count + 1
+         }]);
+     setCount(count + 1);
+   };
+
+   const onClickDeleteDone = id => {
+     const newItemList = items.filter(item => {
+       return item.isDone !== true;
+     });
+       setItems(newItemList);
+   };
+
+   const activeTask = (items.filter((item) => item.isDone === false)).length;
+   const doneTask = (items.filter((item) => item.isDone === true)).length;
+
+   const onClickFilter = filtered => setFilter(filtered);
+
+   switch (filter) {
+     case 'done':
+       itemsFilter = items.filter(item => item.isDone);
+       break;
+     case 'active':
+       itemsFilter = items.filter(item => !item.isDone);
+       break;
+     default:
+       itemsFilter = items;
+   }
+     return(
+       <div className={styles.wrap}>
+       <div>
+       <h1 className={styles.title}>TODOS:</h1>
+       <InputItem
+         items = {items}
+         onClickAdd = {onClickAdd}
+       />
+       <ItemList
+         items={itemsFilter}
+         onClickDone = {onClickDone}
+         onClickDelete = {onClickDelete}
+       />
+       </div>
+       <Footer
+         filtered={filter}
+         onClickFilter={onClickFilter}
+         activeTasks = {activeTask}
+         doneTasks = {doneTask}
+         onClickDeleteDone={onClickDeleteDone}
+        />
+       </div>);
+
 };
 
 export default Todo;

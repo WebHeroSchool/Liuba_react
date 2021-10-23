@@ -6,7 +6,7 @@ import MenuList from '@material-ui/core/MenuList';
 import Todo from '../Todo/Todo';
 import About from '../About/About';
 import Contacts from '../Contacts/Contacts';
-import styles from './App.module.css'
+import styles from './App.module.css';
 
 const App = () =>
 (<Router>
@@ -20,8 +20,12 @@ const App = () =>
       <Route path='/' exact component={About} />
       <Route path='/todo' component={Todo} />
       <Route path='/contacts' component={Contacts} />
+      <div className={styles.logo}>Designed at Web Hero School</div>
     </Card>
   </div>
-  </Router>);
+
+  </Router>
+
+);
 
 export default App;

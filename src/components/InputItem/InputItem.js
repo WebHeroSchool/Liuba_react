@@ -8,57 +8,43 @@ class InputItem extends React.Component {
 
   state = {
     inputValue: '',
-    isError: false
+    error: false,
+    labelText: 'Enter your task'
+
   };
 
   onButtonClick = () => {
-   if (this.state.inputValue === false) {
-     this.setState({
-       isError: true
-     })
-   } else {
-     this.setState({
-        inputValue: '',
-        isError: false
-    })
+        this.setState ({
+          inputValue: '',
+          labelText: 'Enter your next task'
 
-  this.props.onClickAdd(this.state.inputValue.toLowerCase());
-  }
-};
+  });
+
+     if(this.state.inputValue === ''){
+       this.setState({error : true, labelText: 'The field cannot be empty!'});
+     } else if (this.props.items.every(item => item.value !== this.state.inputValue)){
+        this.setState({error:false, labelText: 'Enter your next task'});
+        this.props.onClickAdd(this.state.inputValue);
+    }else {
+          this.setState ({error: true, labelText: 'This task already exists!'});
+    }
+  };
 
 
 render(){
 
-  let textField;
-
-        if (this.state.isError === true) {
-          textField = <TextField
-            error
-            label="Error"
-            id="standard-textarea"
-            fullWidth
-            margin="normal"
-            multiline
-            defaultValue=" "
-            helperText="The field cannot be empty!"
-            value={this.state.inputValue}
-            onChange={event => this.setState({ inputValue: event.target.value })}
-          />
-        } else {
-          textField = textField = <TextField
-            className={styles.input}
-            id="standard-textarea"
-            label="Enter your next task"
-            style={{ width: "85%" }}
-            margin="normal"
-            multiline
-            value={this.state.inputValue.toUpperCase()}
-            onChange={event => this.setState({inputValue: event.target.value})}
-           />
-        }
-
-      return (<div>
-        <div> {textField} </div>
+      return (<div className={styles.wrap}>
+        <TextField
+          className={styles.input}
+          id="standard-textarea"
+          label={this.state.labelText}
+          error={this.state.error}
+          style={{ width: "85%" }}
+          margin="normal"
+          multiline
+          value={this.state.inputValue.toUpperCase()}
+          onChange={event => this.setState({inputValue: event.target.value.toLowerCase() })}
+         />
         <AddBoxRoundedIcon
         className={styles.AddBoxRoundedIcon}
         color="primary"
