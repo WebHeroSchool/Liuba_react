@@ -33,10 +33,12 @@
   font-family: Tahoma, Sans-Serif;
 }
 
-@media screen and (max-width: 750px) and (min-width: 540px) {
+@media screen and (max-width: 750px) and (min-width: 541px) {
 
-  .wrap {
-    margin: 2%;
+  body
+  , .wrap
+  , .card {
+    margin: 0;
   }
 
   .card {
@@ -50,6 +52,7 @@
 
   .logo {
     font-size: 12px;
+    margin-bottom: 5%;
   }
 }
 
@@ -80,8 +83,26 @@
   }
 }
 
-@media (min-width: 751px) {
+@media screen and (max-width: 1366px) and (min-width: 751px) {
   .card {
-    width: 70%;
+    width: 60%;
   }
+
+  body
+  , .wrap
+  , .card {
+    margin: 0;
+  }
+
+}
+
+@media (min-width: 1366px) {
+  .card {
+    width: 48%;
+  }
+
+  .logo {
+    width: 30%
+  }
+
 }

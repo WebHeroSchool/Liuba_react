@@ -36,7 +36,6 @@
   flex-direction: row;
   flex-wrap: wrap;
   width: 100%;
-
 }
 
 .column {
@@ -44,6 +43,7 @@
   flex-direction: column;
   flex: 300px 0;
   text-align: center;
+  position: relative;
 }
 
 .projects {
@@ -234,11 +234,11 @@ color: #356EFF;
     background: #3f51b5;
 }
 
-@media screen and (max-width: 1000px) and (min-width: 150px){
+@media screen and (max-width: 750px) and (min-width: 150px) {
 
 body {
   margin: auto;
-  font-size: 18px;
+  font-size: 14px;
   overflow-y: hidden;
 }
 
@@ -262,8 +262,12 @@ body {
   }
 
   .avatar {
-    width: 300px;
+    width: 220px;
     margin-bottom: 2px;
+  }
+
+  .text {
+    font-size: 18px;
   }
 
   .link__projects {
@@ -284,6 +288,11 @@ body {
     height: 38px;
     margin-bottom: 5%;
   }
+
+  .repos {
+    height: 180px;
+  }
+
 }
 
 @media screen and (max-width: 540px) and (min-width: 150px) {
@@ -405,4 +414,71 @@ body {
   .repo_language {
     width: 37px;
   }
+}
+
+@media screen and (max-width: 1600px) and (min-width: 751px) {
+
+body {
+  font-size: 12px;
+}
+
+  .row
+  , .column {
+    display: block;
+  }
+
+  .avatar {
+    width: 165px;
+    margin: 0 10% 2%;
+  }
+
+  .title{
+    font-size: 22px;
+    text-shadow: -0.1px 0 black, 0 0.1px black, 0.1px 0 black, 0 -0.1px black;
+    margin: 0;
+  }
+
+  .subtitle{
+    margin-bottom: 1%;
+  }
+
+  .text{
+    font-size: 13px;
+    padding: 0 5%;
+  }
+
+  .main__title
+  , .repo__title {
+    margin-bottom: 2%;
+  }
+
+  .repo__title{
+    margin-top: 4px;
+  }
+
+  .repos {
+    height: 140px;
+  }
+
+  .repo {
+    height: 50px;
+    margin-bottom: 0;
+  }
+
+}
+
+@media (min-width: 1600px) {
+
+  .column {
+    margin-right: 7%;
+  }
+
+  .text {
+    width: 100%;
+  }
+
+  .column{
+    flex: 42% 0;
+  }
+
 }
