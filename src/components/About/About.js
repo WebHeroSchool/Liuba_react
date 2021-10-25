@@ -87,7 +87,7 @@ class About extends React.Component {
           <div className={styles.wrap}>
                 <header className={styles.row}>
                 {this.state.isError && (
-                  <div className={styles.avatar__error}>
+                  <div>
                                               <h3>{this.state.error.name}</h3>
                                               <p>{this.state.error.message}</p>
                                           </div>
@@ -123,7 +123,7 @@ class About extends React.Component {
                             2. Game "Find a bug"
                     </a>
                     <a className={styles.link__projects}
-                            href="#"
+                            href="https://webheroschool.github.io/Liuba_react/"
                             target="_blank"
                             rel="noopener noreferrer">
                             3. To-do App

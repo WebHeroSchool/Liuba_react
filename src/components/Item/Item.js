@@ -5,7 +5,6 @@ import DeleteOutlineIcon from '@material-ui/icons/DeleteOutline';
 import ListItemText from '@material-ui/core/ListItemText';
 import ListItem from '@material-ui/core/ListItem';
 import styles from './Item.module.css';
-import PropTypes from'prop-types';
 
 class Item extends React.Component{
 
@@ -32,13 +31,5 @@ class Item extends React.Component{
       </div>);
   }
 }
-
-Item.propTypes = {
-    value: PropTypes.string,
-    isDone: PropTypes.bool,
-    onClickDone: PropTypes.func,
-    onCliсkDelete: PropTypes.func,
-    id: PropTypes.number
-  };
 
 export default Item;
