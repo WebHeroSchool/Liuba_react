@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/Liuba_react/static/css/main.b3747486.chunk.css",
-    "main.js": "/Liuba_react/static/js/main.fdb4ee7a.chunk.js",
-    "main.js.map": "/Liuba_react/static/js/main.fdb4ee7a.chunk.js.map",
+    "main.js": "/Liuba_react/static/js/main.e27ff7ea.chunk.js",
+    "main.js.map": "/Liuba_react/static/js/main.e27ff7ea.chunk.js.map",
     "runtime-main.js": "/Liuba_react/static/js/runtime-main.a72d5a89.js",
     "runtime-main.js.map": "/Liuba_react/static/js/runtime-main.a72d5a89.js.map",
     "static/js/2.d4fc4ca2.chunk.js": "/Liuba_react/static/js/2.d4fc4ca2.chunk.js",
@@ -17,6 +17,6 @@
     "static/js/runtime-main.a72d5a89.js",
     "static/js/2.d4fc4ca2.chunk.js",
     "static/css/main.b3747486.chunk.css",
-    "static/js/main.fdb4ee7a.chunk.js"
+    "static/js/main.e27ff7ea.chunk.js"
   ]
 }
