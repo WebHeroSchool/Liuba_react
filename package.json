@@ -2,7 +2,7 @@
   "name": "todo",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://webheroschool.github.io/To-do_react/",
+  "homepage": "https://webheroschool.github.io/Liuba_react/",
   "dependencies": {
     "@material-ui/icons": "^4.11.2",
     "@octokit/rest": "^18.11.2",
@@ -22,7 +22,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -b master -d build",
+    "deploy": "gh-pages -d build",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
