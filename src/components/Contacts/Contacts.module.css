@@ -19,7 +19,6 @@
     width: 35px;
 }
 
-
 .contacts {
   text-decoration: none;
   color: black;
@@ -42,7 +41,6 @@
   flex-direction: column;
   flex-basis: 100%;
   flex: 1;
-
 }
 
 .column__second {
