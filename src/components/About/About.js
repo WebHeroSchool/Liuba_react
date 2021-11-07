@@ -26,7 +26,7 @@ class About extends React.Component {
         });
     };
 
-    nextPage = () => {
+  nextPage = () => {
         this.setState({
             firstRepo: this.state.firstRepo + 2,
             lastRepo: this.state.lastRepo + 2
@@ -58,7 +58,7 @@ class About extends React.Component {
 
 
   octokit.rest.users.getByUsername({
-  username: 'Liubovminakova'
+  username: 'Liubovminakov'
 }).then(({ data }) => {
   this.setState({
     infoProfile: data,
@@ -75,23 +75,72 @@ class About extends React.Component {
 })
 
 
-
 }
 
+refreshPage = () => window.location.reload();
+
   render(){
-      const { isLoading, repoList, infoProfile, firstRepo, lastRepo } = this.state;
+      const { isLoading, repoList, infoProfile, isError, firstRepo, lastRepo } = this.state;
       return(
-<div>
-          { isLoading ? <LinearProgress style={{ width: "100%" }} /> :
-<div>
-          <div className={styles.wrap}>
+  <div className={styles.wrap}>
+        { isLoading && (
+                <div>
+                    <LinearProgress />
+                </div>
+
+        )}
+        { !isLoading && isError && (
+          <div>
+          <header className={styles.row}>
+                <div className={styles.column}>
+                <figure className={styles.image_error}>
+                      <img
+                      variant="square"
+                      src={infoProfile.avatar_url}
+                      alt='Avatar'
+                      />
+                      <h3>{this.state.error.name}</h3>
+                      <p>{this.state.error.message}</p>
+
+                </figure>
+                  </div>
+                <div className={styles.column}>
+                      <h1 className={styles.title}> {infoProfile.name} </h1>
+                      <h3 className={styles.subtitle}> {infoProfile.bio} </h3>
+                      <h5 className={styles.text}> I’m motivated Front-end Developer seeking an entry-level position with growing organization, where i can learn and make a positive impact. In plan is learn more about JavaScript and React. Also I want to start to learn Vue.JS, PHP and Typescript. And of course do a lot of practice to improve my skills! </h5>
+                </div>
+          </header>
+
+              <div className={styles.error}>An error has occurred. <br/>  <a onClick={this.refreshPage}>Please reload the page and try again.</a> </div>
+
+          </div>
+        )}
+        { !isLoading && !isError && repoList.length === 0 && (
+          <div>
+          <header className={styles.row}>
+                <div className={styles.column}>
+                      <img
+                      className={styles.avatar}
+                      variant="square"
+                      src={infoProfile.avatar_url}
+                      alt='Avatar'
+                      />
+                  </div>
+                <div className={styles.column}>
+                      <h1 className={styles.title}> {infoProfile.name} </h1>
+                      <h3 className={styles.subtitle}> {infoProfile.bio} </h3>
+                      <h5 className={styles.text}> I’m motivated Front-end Developer seeking an entry-level position with growing organization, where i can learn and make a positive impact. In plan is learn more about JavaScript and React. Also I want to start to learn Vue.JS, PHP and Typescript. And of course do a lot of practice to improve my skills! </h5>
+                </div>
+          </header>
+
+              <div className={styles.error}>Error: no repositories found.<br/> You must add one before updating <a href={infoProfile.html_url}>github.com</a> </div>
+
+          </div>
+        )}
+        { !isLoading && !isError && repoList.length > 0 && (
+
+  <div>
                 <header className={styles.row}>
-                {this.state.isError && (
-                  <div>
-                                              <h3>{this.state.error.name}</h3>
-                                              <p>{this.state.error.message}</p>
-                                          </div>
-                                      )}
                       <div className={styles.column}>
                             <img
                             className={styles.avatar}
@@ -107,7 +156,6 @@ class About extends React.Component {
                       </div>
                 </header>
 
-                {isLoading ? < LinearProgress style={{ width: "100%" }} /> :
                 <main className={styles.projects}>
                     <h2 className={styles.main__title}>My projects:</h2>
                     <a className={styles.link__projects}
@@ -128,16 +176,10 @@ class About extends React.Component {
                             rel="noopener noreferrer">
                             3. To-do App
                     </a>
-                </main>}
+                </main>
 
-
-                {isLoading ? < LinearProgress style={{ width: "100%" }} /> :
                 <section className={styles.main}>
                     <h2 className={styles.repo__title}> My repositories: </h2>
-                    {this.state.isErrorRepositories && (
-                                  <div className={styles.error}>Error: no repositories found.<br/> You must add one before updating</div>
-
-                                )}
                     <div className={styles.repos}>
                     <div className={styles.list}>
                     {repoList.slice(firstRepo, lastRepo).map(repo =>
@@ -177,14 +219,16 @@ class About extends React.Component {
               Next
           </button>
         </div>
-            </section> }
+            </section>
 
-                </div>
-                </div>
-              }
-              </div>
+  </div>
+          )}
 
+
+  </div>
           );
+
+
       }
 }
 export default About;
