@@ -58,7 +58,7 @@ class About extends React.Component {
 
 
   octokit.rest.users.getByUsername({
-  username: 'Liubovminakov'
+  username: 'Liubovminakova'
 }).then(({ data }) => {
   this.setState({
     infoProfile: data,
