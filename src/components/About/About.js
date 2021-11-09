@@ -111,7 +111,7 @@ refreshPage = () => window.location.reload();
                 </div>
           </header>
 
-              <div className={styles.error}>An error has occurred. <br/>  <a onClick={this.refreshPage}>Please reload the page and try again.</a> </div>
+              <div className={styles.error}>An error has occurred. <br/>  <a onClick={this.refreshPage}>Please <code>reload</code> the page and try again.</a> </div>
 
           </div>
         )}
