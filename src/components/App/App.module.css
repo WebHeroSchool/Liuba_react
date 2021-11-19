@@ -37,6 +37,12 @@ body {
   font-family: Tahoma, Sans-Serif;
 }
 
+@media screen and (max-width: 750px) and (min-width: 300px) {
+body {
+  overflow-y: scroll;
+}
+}
+
 @media screen and (max-width: 750px) and (min-width: 541px) {
 
   body
