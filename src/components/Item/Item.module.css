@@ -5,3 +5,19 @@
 .done {
   text-decoration: line-through;
 }
+
+.DeleteOutlineIcon {
+  transition: transform .2s;
+}
+
+.DeleteOutlineIcon:hover {
+  transform: scale(1.2);
+}
+
+.Checkbox {
+  transition: transform .2s;
+}
+
+.Checkbox:hover {
+  transform: scale(1.2);
+}

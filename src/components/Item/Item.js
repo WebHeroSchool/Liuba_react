@@ -13,6 +13,7 @@ class Item extends React.Component{
         return (<div>
             <ListItem>
                 <Checkbox color="primary"
+                className={styles.Checkbox}
                 checked={isDone}
                 inputProps={{'aria-label': 'uncontrolled-checkbox'}}
                 onClick = {() => onClickDone(id)}/>
@@ -26,7 +27,10 @@ class Item extends React.Component{
                      {value}
                  </span>
              </ListItemText>
-             <DeleteOutlineIcon onClick = {() => onClickDelete (id)} />
+             <DeleteOutlineIcon
+             onClick = {() => onClickDelete (id)}
+             className={styles.DeleteOutlineIcon}
+              />
             </ListItem>
       </div>);
   }

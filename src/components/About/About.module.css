@@ -1,7 +1,7 @@
 .wrap {
-    padding: 3%;
-    font-family: Tahoma, Sans-Serif;
-  }
+  padding: 3%;
+  font-family: Tahoma, Sans-Serif;
+}
 
 .title {
   color: #3f51b5;
@@ -204,7 +204,7 @@
   margin: auto;
   display: flex;
   justify-content: center;
-  }
+}
 
 .button {
   color: #3f51b5;
@@ -253,10 +253,10 @@ code {
 
 @media screen and (max-width: 750px) and (min-width: 150px) {
 
-body {
-  margin: auto;
-  font-size: 14px;
-}
+  body {
+    margin: auto;
+    font-size: 14px;
+  }
 
   .wrap {
     padding: 0;
@@ -442,9 +442,9 @@ body {
 
 @media screen and (max-width: 1600px) and (min-width: 751px) {
 
-body {
-  font-size: 12px;
-}
+  body {
+    font-size: 12px;
+  }
 
   .row
   , .column {
