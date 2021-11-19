@@ -10,7 +10,7 @@ const Todo = () =>  {
        items: JSON.parse(localStorage.getItem('items')) ||
        [],
 
-      count: 0,
+      count: 1,
       filter: 'all'
 };
 

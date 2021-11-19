@@ -35,7 +35,6 @@ render(){
 
       return (<div className={styles.wrap}>
         <TextField
-          className={styles.input}
           id="standard-textarea"
           label={this.state.labelText}
           error={this.state.error}

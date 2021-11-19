@@ -91,28 +91,7 @@ refreshPage = () => window.location.reload();
         )}
         { !isLoading && isError && (
           <div>
-          <header className={styles.row}>
-                <div className={styles.column}>
-                <figure className={styles.image_error}>
-                      <img
-                      variant="square"
-                      src={infoProfile.avatar_url}
-                      alt='Avatar'
-                      />
-                      <h3>{this.state.error.name}</h3>
-                      <p>{this.state.error.message}</p>
-
-                </figure>
-                  </div>
-                <div className={styles.column}>
-                      <h1 className={styles.title}> {infoProfile.name} </h1>
-                      <h3 className={styles.subtitle}> {infoProfile.bio} </h3>
-                      <h5 className={styles.text}> I’m motivated Front-end Developer seeking an entry-level position with growing organization, where i can learn and make a positive impact. In plan is learn more about JavaScript and React. Also I want to start to learn Vue.JS, PHP and Typescript. And of course do a lot of practice to improve my skills! </h5>
-                </div>
-          </header>
-
-              <div className={styles.error}>An error has occurred. <br/>  <a onClick={this.refreshPage}>Please <code>reload</code> the page and try again.</a> </div>
-
+              <div className={styles.error}>An error has occurred. <br/><div onClick={this.refreshPage}>Please <code>reload</code> the page and try again.</div> </div>
           </div>
         )}
         { !isLoading && !isError && repoList.length === 0 && (

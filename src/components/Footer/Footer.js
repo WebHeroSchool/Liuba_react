@@ -7,7 +7,7 @@ import Button from '@material-ui/core/Button';
         onClick={() => onClickFilter('active')}>
             {activeTasks} items left:
       </div>
-      <div className={styles.buttons}>
+      <div>
         <Button onClick={() => onClickFilter('allTask')}>
           ALL {activeTasks + doneTasks}
         </Button>
@@ -23,5 +23,5 @@ import Button from '@material-ui/core/Button';
       </div>
       </footer>
     );
-    
+
 export default Footer;
