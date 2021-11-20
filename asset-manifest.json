@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/Liuba_react/static/css/main.b3747486.chunk.css",
-    "main.js": "/Liuba_react/static/js/main.fdb4ee7a.chunk.js",
-    "main.js.map": "/Liuba_react/static/js/main.fdb4ee7a.chunk.js.map",
+    "main.css": "/Liuba_react/static/css/main.75323e27.chunk.css",
+    "main.js": "/Liuba_react/static/js/main.58f89bb5.chunk.js",
+    "main.js.map": "/Liuba_react/static/js/main.58f89bb5.chunk.js.map",
     "runtime-main.js": "/Liuba_react/static/js/runtime-main.a72d5a89.js",
     "runtime-main.js.map": "/Liuba_react/static/js/runtime-main.a72d5a89.js.map",
-    "static/js/2.d4fc4ca2.chunk.js": "/Liuba_react/static/js/2.d4fc4ca2.chunk.js",
-    "static/js/2.d4fc4ca2.chunk.js.map": "/Liuba_react/static/js/2.d4fc4ca2.chunk.js.map",
+    "static/js/2.6cb6e84d.chunk.js": "/Liuba_react/static/js/2.6cb6e84d.chunk.js",
+    "static/js/2.6cb6e84d.chunk.js.map": "/Liuba_react/static/js/2.6cb6e84d.chunk.js.map",
     "index.html": "/Liuba_react/index.html",
-    "static/css/main.b3747486.chunk.css.map": "/Liuba_react/static/css/main.b3747486.chunk.css.map",
-    "static/js/2.d4fc4ca2.chunk.js.LICENSE.txt": "/Liuba_react/static/js/2.d4fc4ca2.chunk.js.LICENSE.txt",
+    "static/css/main.75323e27.chunk.css.map": "/Liuba_react/static/css/main.75323e27.chunk.css.map",
+    "static/js/2.6cb6e84d.chunk.js.LICENSE.txt": "/Liuba_react/static/js/2.6cb6e84d.chunk.js.LICENSE.txt",
     "static/media/About.module.css": "/Liuba_react/static/media/error.faae0a5a.svg",
     "static/media/ItemList.module.css": "/Liuba_react/static/media/no_tasks.b67593d2.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.a72d5a89.js",
-    "static/js/2.d4fc4ca2.chunk.js",
-    "static/css/main.b3747486.chunk.css",
-    "static/js/main.fdb4ee7a.chunk.js"
+    "static/js/2.6cb6e84d.chunk.js",
+    "static/css/main.75323e27.chunk.css",
+    "static/js/main.58f89bb5.chunk.js"
   ]
 }
