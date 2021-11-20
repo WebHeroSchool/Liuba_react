@@ -2,7 +2,7 @@
   "name": "todo",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://liubaminakova.netlify.app",
+  "homepage": "https://webheroschool.github.io/Liuba_react/",
   "dependencies": {
     "@material-ui/icons": "^4.11.2",
     "@octokit/rest": "^18.11.2",
@@ -21,7 +21,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "predeploy": "CI=false npm run build",
+    "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
     "eject": "react-scripts eject"
   },
