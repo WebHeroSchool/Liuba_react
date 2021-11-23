@@ -22,7 +22,7 @@
   margin: 10px 0;
   width: 250px;
   border-radius: 5px;
-  flex:40%;
+  flex: 40%;
   border: #ccc inset;
 }
 
@@ -60,7 +60,7 @@
 }
 
 .link__projects:hover {
-  color: #356EFF;
+  color: #356eff;
 }
 
 .main {
@@ -149,7 +149,7 @@
   margin-right: 5px;
   height: 16px;
   width: 16px;
-  background: #E34C26;
+  background: #e34c26;
   border-radius: 50%;
 }
 
@@ -157,7 +157,7 @@
   margin-right: 5px;
   height: 16px;
   width: 16px;
-  background: #563D7C;
+  background: #563d7c;
   border-radius: 50%;
 }
 
@@ -165,7 +165,7 @@
   margin-right: 5px;
   height: 16px;
   width: 16px;
-  background: #F1E05A;
+  background: #f1e05a;
   border-radius: 50%;
 }
 
@@ -213,7 +213,7 @@
   box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.25);
   border-radius: 10px;
   background: none;
-  font: normal normal 14px/16px Tahoma;
+  font-family: normal 14px/16px Tahoma;
   height: 32px;
   width: 74px;
   margin-right: 8px;
@@ -245,14 +245,13 @@ img[alt='Avatar'] {
 }
 
 code {
-  font-family: Tahoma;
+  font-family: Tahoma, arial, helvetica, sans-serif;
   color: crimson;
   text-decoration: underline;
   font-size: 105%;
 }
 
 @media screen and (max-width: 750px) and (min-width: 150px) {
-
   body {
     margin: auto;
     font-size: 14px;
@@ -269,7 +268,7 @@ code {
 
   .text {
     padding: 0 40px;
-    font-size: 20px;
+    font-size: 18px;
     margin-bottom: 4%;
   }
 
@@ -280,10 +279,6 @@ code {
   .avatar {
     width: 220px;
     margin-bottom: 2px;
-  }
-
-  .text {
-    font-size: 18px;
   }
 
   .link__projects {
@@ -309,10 +304,9 @@ code {
     height: 180px;
   }
 
-  .image_error{
+  .image_error {
     margin-top: 8%;
   }
-
 }
 
 @media screen and (max-width: 540px) and (min-width: 150px) {
@@ -456,17 +450,17 @@ code {
     margin: 0 10% 2%;
   }
 
-  .title{
+  .title {
     font-size: 22px;
     text-shadow: -0.1px 0 black, 0 0.1px black, 0.1px 0 black, 0 -0.1px black;
     margin: 0;
   }
 
-  .subtitle{
+  .subtitle {
     margin-bottom: 1%;
   }
 
-  .text{
+  .text {
     font-size: 13px;
     padding: 0 5%;
   }
@@ -476,7 +470,7 @@ code {
     margin-bottom: 2%;
   }
 
-  .repo__title{
+  .repo__title {
     margin-top: 4px;
   }
 
@@ -505,7 +499,7 @@ code {
     width: 100%;
   }
 
-  .column{
+  .column {
     flex: 42% 0;
   }
 
