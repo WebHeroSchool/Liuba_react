@@ -138,19 +138,19 @@ refreshPage = () => window.location.reload();
                 <main className={styles.projects}>
                     <h2 className={styles.main__title}>My projects:</h2>
                     <a className={styles.link__projects}
-                            href="https://12-liubovminakova.vercel.app/"
-                            target='_blank'
-                            rel='noopener noreferrer'>
-                            1. Html & CSS Site
-                    </a>
-                    <a className={styles.link__projects}
                             href="https://webheroschool.github.io/-Js/"
                             target="_blank"
                             rel="noopener noreferrer">
                             2. Game "Find a bug"
                     </a>
                     <a className={styles.link__projects}
-                            href="https://webheroschool.github.io/Liuba_react/"
+                            href="https://12-liubovminakova.vercel.app/"
+                            target='_blank'
+                            rel='noopener noreferrer'>
+                            1. Html & CSS Site
+                    </a>
+                    <a className={styles.link__projects}
+                            href="https://liubaminakova.netlify.app/"
                             target="_blank"
                             rel="noopener noreferrer">
                             3. To-do App

@@ -2,6 +2,7 @@
   padding: 4%;
   margin: 5px 40px 0;
 }
+
 .title {
   margin: 5px 0 40px;
   color: #3f51b5;
@@ -11,12 +12,12 @@
 }
 
 .linkedln {
-    width: 35px;
+  width: 35px;
 }
 
 .github {
-    padding-right: 15px;
-    width: 35px;
+  padding-right: 15px;
+  width: 35px;
 }
 
 .contacts {
@@ -36,6 +37,7 @@
   width: 100%;
   text-align: left;
 }
+
 .column__first {
   display: flex;
   flex-direction: column;

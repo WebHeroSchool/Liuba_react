@@ -37,17 +37,10 @@ body {
   font-family: Tahoma, Sans-Serif;
 }
 
-@media screen and (max-width: 750px) and (min-width: 300px) {
-body {
-  overflow-y: scroll;
-}
-}
-
 @media screen and (max-width: 750px) and (min-width: 541px) {
-
-  body
-  , .wrap
-  , .card {
+  body,
+  .wrap,
+  .card {
     margin: 0;
   }
 
@@ -71,11 +64,10 @@ body {
   .card {
       width: 100%;
       margin-bottom: 2%;
-      height: 100vh;
   }
 
-  .wrap
-  , .card {
+  .wrap,
+  .card {
     margin: 0;
   }
 
@@ -112,7 +104,7 @@ body {
   }
 
   .logo {
-    width: 30%
+    width: 30%;
   }
 
 }
